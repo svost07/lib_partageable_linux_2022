@@ -11,7 +11,7 @@ int main(int argc, char ** argv)
 	int choice = -1;
 	
 	//Chose the component 
-	while not (choice == 1 || choice == 2){
+	while ((choice != 1) && (choice != 2)){
 		std::cout << "Which component do you want? Type 1 or 2." << std::endl;
 		std::cin>> choice;
 	}
