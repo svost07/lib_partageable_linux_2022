@@ -12,15 +12,15 @@ int main(int argc, char ** argv)
 	
 	//Chose the component 
 	while (choice != 1 || choice != 2){
-		stdd::cout << "Which component do you want? Type 1 or 2." << std::endl;
+		std::cout << "Which component do you want? Type 1 or 2." << std::endl;
 		std::cin>> choice;
 	}
 	
 	//Open the right file
-	void hndl = nullptr; 
+	void* hndl = nullptr; 
 	if (choice == 1){
 		hndl = dlopen("./libComposant1.so", RTLD_LAZY);
-	else if (choice == 2){
+	}else if (choice == 2){
 		hndl = dlopen("./libComposant2.so", RTLD_LAZY);
 	}
 		
